@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiplicationTable(num) {
+    for (let i = 1; i <= 10; i++) {
+      let product = num * i;
+      console.log(num + " x " + i + " = " + product);
+    }
+  }
+  
+  // Test the function with different input numbers
+  multiplicationTable(5); // Generate multiplication table for 5
+  multiplicationTable(8); //
+    </script>
+</body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <style>
+        
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid green;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="table-container"></div>
+    <script>
+        function multiplicationTable(num) {
+            let table = document.createElement("table");
+            var tableCaption = document.createElement("caption");
+            tableCaption.textContent = "Multiplication Table for " + num;
+            table.appendChild(tableCaption);
+            let tableContainer = document.getElementById("table-container");
+            for (let i = 1; i <= 10; i++) {
+                let product = num * i;
+                // console.log( num+"x"+i +"="+ product)
+                let row = table.insertRow();
+                let cill1 = row.insertCell();
+                let cill2 = row.insertCell();
+                let cill3 = row.insertCell();
+                cill1.textContent = num;
+                cill2.textContent = i;
+                cill3.textContent = product;
+
+            }
+            tableContainer.appendChild(table);
+        }
+        multiplicationTable(8);
+        multiplicationTable(7);
+    </script>
+</body>
+
+</html>
+</html>
